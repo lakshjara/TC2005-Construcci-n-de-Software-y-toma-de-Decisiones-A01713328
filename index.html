@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title> Lab 1 </title>
+
+        <h1> Cosas sobre mí </h1>
+        <h3>Soy una persona creativa, curiosa y analítica. 
+            Estudio Ingeniería en Tecnologías Computacionales en el Tecnológico de Monterrey. 
+            Disfruto de actividades como la fotografía, las actividades extremas, la música y los viajes, que inspiran tanto mi trabajo académico como mis proyectos personales. 
+            Soy aventurera y siempre busco vivir nuevas experiencias, mejorar y dejar una huella positiva en lo que hago.</h3>
+        <img src="Laksh.jpeg" width="366" height="492"> <img src="flores.jpeg" width="366" height="492"> <img src="paracaidas.JPG" width="366" height="492">
+        <img src="cheer.JPEG" width="720" height="504"> <img src="stunt.jpeg" width="378" height="504">
+
+        <h2>Laboratorio 1: Introducción a las aplicaciones web, HTML5 y ciclo de vida de los sistemas de información</h2>
+        <p style="text-align: left;">
+        ¿Cuál es la diferencia entre Internet y la World Wide Web?<br>
+        Internet es la red mundial que conecta computadoras y permite enviar datos entre ellas. Y la world wide web es un servicio que funciona dentro de Internet y nos permite ver información en paginas web usando un navegador <br>
+        <br>
+        ¿Cuáles son las partes de un URL?<br>
+        URL significa Uniform Resource Locator (Localizador Uniforme de Recursos)
+        El protocolo de red es la primera parte y le dice al sistema qué tipo de conexión usar para comunicarse con el servidor, por ejemplo: HTTP, HTTPS, FTP o mailto
+        El subdominio indica el servicio específico donde se encuentra la información, el más común es www (World Wide Web)
+        El dominio es el nombre del servidor al que se quiere acceder. También muestra el tipo de organización (.com, .edu), el país de origen (.ar, .br, .it), lo que se conoce como extensión o TLD (Top Level Domain)<br>
+        <br>
+        ¿Cuál es el propósito de los métodos HTTP: GET, HEAD, POST, PUT, PATCH, DELETE?<br>
+        GET: se usa para solicitar información de un recurso específico, no permite el envió de datos a excepción si dichos datos se envían como parámetro en la URL que realiza la petición. La respuesta puede incluir contenido en formatos como HTML, JSON, XML, imágenes o JavaScript.<br>
+        HEAD: es parecido a GET, pero no devuelve el contenido del recurso, solo el código de respuesta HTTP y los encabezados. Se usa cuando no interesa ver la información completa, sino verificar el estado de un enlace o comprobar si un archivo existe.<br>
+        POST: envía datos al servidor a través del cuerpo de la petición, se usa principalmente para registrar o crear información. Cada petición puede generar un cambio nuevo en el servidor. Se utiliza comúnmente para enviar datos de formularios, archivos o información en formato JSON.<br>
+        PUT: es idempotente, lo que significa que repetir la misma petición varias veces produce el mismo resultado. Se usa principalmente para actualizar información existente en el servidor, similar a un UPDATE en una base de datos. Los datos que se envían en una petición PUT suelen ir en el cuerpo del mensaje, por ejemplo en formularios o en formato JSON.<br>
+        PATCH: se usa para modificar solo una parte de un recurso, en lugar de actualizarlo completo y se enfoca en cambios parciales. Para saber si un servidor acepta PATCH, se puede revisar los encabezados como “Allow”, “Access-Control-Allow-Methods” o “Accept-Patch”.<br>
+        DELETE: se usa para eliminar un recurso específico del servidor y es idempotente.<br>
+        <br>
+        ¿Qué método HTTP se debe utilizar al enviar un formulario HTML, por ejemplo cuando ingresas tu usuario y contraseña en algún sitio? ¿Por qué?<br>
+        Se debe usar el método POST, porque permite enviar datos sensibles (como usuario y contraseña) en el cuerpo de la petición y no en la URL, lo que ofrece mayor seguridad y evita que esa información quede visible en el historial o en la dirección del navegador.<br>
+        <br>
+        ¿Qué método HTTP se utiliza cuando a través de un navegador web se accede a una página a través de un URL?<br>
+        Se utiliza es GET, porque el navegador está solicitando información de un recurso (la página web) al servidor sin enviar datos en el cuerpo de la petición, solo pidiendo que le devuelva el contenido de la página, como una página HTML, imágenes o documentos, permitiendo visualizar el sitio web solicitado. <br>
+        Un servidor web devuelve una respuesta HTTP con código 200. ¿Qué significa esto? ¿Ocurrió algún error?<br>
+        Significa que la solicitud se realizó correctamente y el servidor devolvió la información solicitada. No ocurrió ningún error, es un código de éxito que indica que todo funcionó como se esperaba.<br>
+        <br>
+        ¿Es responsabilidad del desarrollador corregir un sitio web si un usuario reporta que intentó acceder al sitio y se encontró con un error 404? ¿Por qué?<br>
+        Sí, es responsabilidad del desarrollador corregirlo, porque un error 404 indica que el servidor no puede encontrar una página que debería estar disponible. Esto suele ocurrir por URLs mal escritas, páginas eliminadas o movidas sin redirección, enlaces rotos o problemas de configuración.<br>
+        <br>
+        ¿Es responsabilidad del desarrollador corregir un sitio web si un usuario reporta que intentó acceder al sitio y se encontró con un error 500? ¿Por qué?<br>
+        Sí, es responsabilidad del desarrollador corregir un error 500, porque este código indica un problema interno del servidor que impide que el sitio funcione correctamente. Si no se corrige, el sitio queda inaccesible para los usuarios, afectando la experiencia y la confiabilidad del servicio.<br>
+        <br>
+        ¿Qué significa que un atributo HTML5 esté depreciado o desaprobado (deprecated)? Menciona algunos elementos de HTML 4 que en HTML5 estén desaprobados.<br>
+        Significa que se considera obsoleto y ya no se recomienda usarlo, porque HTML es un lenguaje que evoluciona constantemente. Aunque algunos navegadores todavía lo soportan, en el futuro podrían dejar de hacerlo, lo que puede causar errores o que la página no se visualice correctamente. Por eso se sustituyen por alternativas más actuales. Algunos de los elementos de HTML 4 que en HTML 5 están desaprobados son applet que se reemplaza por embed u object, center y font que se reemplazan con estilos en CSS, y big que se introduce con CSS.<br>
+        <br>
+        ¿Cuáles son las diferencias principales entre HTML 4 y HTML5?<br>
+        HTML4 se enfocaba en la estructura básica, mientras que HTML5 ofrece una web más semántica (se refiere a usar etiquetas que describen qué es el contenido, no solo cómo se ve), interactiva y multimedia, facilitando la creación de aplicaciones modernas.<br>
+        <br>
+        ¿Qué componentes de estructura y estilo tiene una tabla?
+            <li>table: es la etiqueta principal que define la tabla</li>
+            <li>tr: define cada fila de la tabla</li>
+            <li>td: representa una celda de datos</li>
+            <li>th: representa una celda de encabezado</li>
+            <li>thead, tbody y tfoot: agrupan filas en encabezado, cuerpo y pie de la tabla</li>
+            <li>caption: añade un título o leyenda a la tabla</li>
+            <li>col y colspan: permiten hacer referencia y ajustar columnas</li>
+        <br>
+        ¿Cuáles son los principales controles de una forma HTML5?<br>
+        Los principales controles de una forma HTML5 son los elementos que permiten ingresar y enviar datos del usuario. Los más importantes son:<br>
+        Campos de entrada (input): texto, contraseña, correo, fecha, hora, rango, color y archivo<br>
+        textarea: para texto largo<br>
+        select: listas desplegables<br>
+        Casillas de verificación y botones de opción: para seleccionar opciones<br>
+        Botones (button): enviar, reiniciar o ejecutar acciones<br>
+        Selectores avanzados: fecha, hora, rango y color<br>
+        Carga de archivos (input type="file")<br>
+        Autocompletar: sugerencias automáticas al escribir<br>
+        fieldset y legend: para organizar los controles<br>
+        <br>
+        ¿Qué tanto soporte HTML5 tiene el navegador que utilizas? Puedes utilizar la siguiente página para descubrirlo: http://html5test.com/ (Al responder la pregunta recuerda poner el navegador que utilizas)<br>
+        Utilizo el navegador Google Chrome y según la prueba realizada, este navegador obtuvo una puntuación de 526 de 555, lo que significa que tiene un alto nivel de soporte para HTML5 y es capaz de ejecutar correctamente la mayoría de las funciones modernas de la web.<br>
+        Sobre el ciclo de vida y desarrollo de los sistemas de información:<br>
+        <br>
+        ¿Cuál es el ciclo de vida de los sistemas de información?<br>
+        Es el conjunto de etapas por las que pasa un sistema desde su planeación hasta su uso y mantenimiento. Este ciclo es el proceso organizado para crear, implementar y mejorar un sistema que recopila, procesa y transmite información.<br>
+        <br>
+        ¿Cuál es el ciclo de desarrollo de sistemas de información?<br>
+        Las principales fases del ciclo de vida son:<br>
+        Planificación: se definen los objetivos del proyecto, su alcance, viabilidad y riesgos<br>
+        Análisis: se determinan los requerimientos del sistema y lo que debe hacer<br>
+        Diseño: se establece la estructura y la arquitectura del sistema, evaluando alternativas de implementación<br>
+        Implementación: se construye el sistema utilizando las herramientas y tecnologías adecuadas<br>
+        Pruebas: se detectan y corrigen errores para asegurar su correcto funcionamiento<br>
+        Instalación o despliegue: se prepara el entorno de hardware y software donde operará el sistema<br>
+        Uso y mantenimiento: se corrigen fallas, se adapta el sistema a nuevas necesidades y se agregan mejoras<br>
+        <br>
+        Referencias<br>
+        Neubox. (2023, 11 julio). La Web y el Internet ¿Son lo mismo? Blog NEUBOX. https://neubox.com/blog/la-web-y-el-internet-son-lo-mismo/?srsltid=AfmBOorRxfBSdud-UYadBQBavas9lq5PsqdoPCG9Q1bK2ed9SPhCVZRq
+Equipo editorial, Etecé. (2024, 10 junio). URL - Concepto, usos, partes y características. Concepto. https://concepto.de/url/ 
+Morales, W. (2021, 1 junio). Métodos HTTP – POST, GET, PUT, DELETE. Estilo Web. https://estilow3b.com/metodos-http-post-get-put-delete/ 
+HTTP | MDN. (2025, 7 julio). https://developer.mozilla.org/es/docs/Web/HTTP 
+Rivas, M. (2025, 21 enero). ¿Qué son los códigos de respuesta 200? - Webempresa. Webempresa. https://www.webempresa.com/blog/codigos-respuesta-200.html
+Boada, D. (2026, 9 febrero). Cómo arreglar el error 404 Not Found: 5 formas sencillas. Tutoriales Hostinger. https://www.hostinger.com/mx/tutoriales/como-arreglar-el-error-404-not-found
+Hosting, S. W. (2024, 6 noviembre). ¿Qué es el “500 Internal Server Error” y cómo solucionarlo? SiteGround. https://es.siteground.com/kb/500-internal-error/
+Estas son las etiquetas obsoletas en HTML5: ¡Actualízate! | Tokio. (s. f.). Tokio School. https://www.tokioschool.com/noticias/etiquetas-obsoletas-html5/ 
+Diferencias entre HTML 4 y HTML 5. (s. f.). https://www.q2bstudio.com/nuestro-blog/16610/diferencias-entre-html-4-y-html-5?scriptscookies=1 
+Marco, B. S. (s. f.). Tablas. HTML. Páginas web HTML y hojas de estilo CSS. Bartolomé Sintes Marco. www.mclibre.org. https://www.mclibre.org/consultar/htmlcss/html/html-tablas.html 
+Advanced Form Controls in HTML5. (2023, 22 junio). AlmaBetter. https://www.almabetter.com/bytes/tutorials/html/form-controls-in-html
+The HTML5 test - How well does your browser support HTML5? (s. f.). HTML5test.com. https://html5test.com/ 
+​​Guerrero, A. C., & Guerrero, A. C. (2015, 20 julio). Ciclo de vida de un sistema de información. Gestiopolis. https://www.gestiopolis.com/ciclo-de-vida-de-un-sistema-de-informacion/
+<br>
+        </p>
+
+        <h2> Contáctame </h2>
+        <h2>María Fernanda Padmé Lakshmi Martínez Jara</h2>
+        <h3> A01713328 </h3>
+        <a href="mailto:A01713328@tec.mx">Correo Instutucional</a>
+        </a>
+    </br>
+    </br>
+        <h3> Editor: Visual Studio Code </h3>
+        <script> scr= "intro.js" </script>
+    </body>
+</html>
