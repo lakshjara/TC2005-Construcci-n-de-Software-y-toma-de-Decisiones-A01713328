@@ -1,0 +1,17 @@
+body {
+    font-family: "Helvetica", "Arial", sans-serif;
+    margin: 40px;
+}
+
+img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+h1 {
+    color: rgb(136, 188, 255);
+}
+
+h3 {
+    color: rgb(3, 88, 152);
+}
