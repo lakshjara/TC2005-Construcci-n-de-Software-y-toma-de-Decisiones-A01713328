@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title> Lab 4 </title>
+
+        <body style="font-family: Helvetica, Arial, sans-serif; margin:40px;">
+        
+        <h1> Cosas sobre mí </h1>
+        <h3>Soy una persona creativa, curiosa y analítica. 
+            Estudio Ingeniería en Tecnologías Computacionales en el Tecnológico de Monterrey. 
+            Disfruto de actividades como la fotografía, las actividades extremas, la música y los viajes, que inspiran tanto mi trabajo académico como mis proyectos personales. 
+            Soy aventurera y siempre busco vivir nuevas experiencias, mejorar y dejar una huella positiva en lo que hago.</h3>
+        <img src="Laksh.jpeg" width="183" height="246" style="border-radius:8px;"> 
+        <img src="flores.jpeg" width="183" height="246" style="border-radius:8px;">
+        <img src="paracaidas.JPG" width="183" height="246" style="border-radius:8px;">
+        <img src="stunt.jpeg" width="189" height="252" style="border-radius:8px;">
+
+
+        <h2>Laboratorio 4: Fundamentos de JavaScript</h2>
+
+  <h3>1. Tabla: n, n², n³ (document.write)</h3>
+  <p>
+    Entrada: un número pedido con un prompt. Salida: tabla del 1 al número dado con cuadrados y cubos. 
+    <strong>Usa document.write</strong>.
+  </p>
+  <button id="script-01">Ejecutar 1</button>
+
+  <hr>
+
+  <h3>2. Suma aleatoria + tiempo</h3>
+  <p>
+    Entrada: prompt con resultado de suma de 2 números aleatorios. 
+    Salida: correcto/incorrecto y tiempo.
+  </p>
+  <button id="script-02">Ejecutar 2</button>
+  <div id="out2" style="margin-top:10px;"></div>
+
+  <hr>
+
+  <h3>3. Contador</h3>
+  <p>
+    Regresa: cantidad de negativos, ceros y positivos. Incluye pruebas con <code>console.assert()</code>.
+  </p>
+  <button id="script-03">Ejecutar 3 (demo + pruebas)</button>
+  <pre id="out3" style="margin-top:10px;"></pre>
+
+  <hr>
+
+  <h3>4. Promedios</h3>
+  <p>
+    Regresa: arreglo con promedios por renglón. Incluye pruebas con <code>console.assert()</code>.
+  </p>
+  <button id="script-04">Ejecutar 4 (demo + pruebas)</button>
+  <pre id="out4" style="margin-top:10px;"></pre>
+
+  <hr>
+
+  <h3>5. Inverso</h3>
+  <p>
+    Regresa: número con dígitos invertidos. Incluye pruebas con <code>console.assert()</code>.
+  </p>
+  <button id="script-05">Ejecutar 5 (demo + pruebas)</button>
+  <pre id="out5" style="margin-top:10px;"></pre>
+
+  <hr>
+
+  <h3>6. Problema de mi elección con objeto, constructor y métodos</h3>
+
+<p>
+Planificador de riego de plantas<br>  
+Calcula cuánta agua necesita tu planta según tamaño y temperatura, y te dice cada cuánto debes regarla.
+</p>
+
+<label>Tamaño de la planta:</label>
+<select id="tamPlanta">
+  <option value="pequena">Pequeña</option>
+  <option value="mediana">Mediana</option>
+  <option value="grande">Grande</option>
+</select>
+<br><br>
+
+<label>Temperatura ambiente (°C):</label>
+<input type="number" id="tempPlanta" value="25">
+<br><br>
+
+<button id="script-06">Calcular riego</button>
+
+<div id="out6" style="margin-top:10px;"></div>
+
+    <h2> Preguntas </h2>
+        <p style="text-align: left;">
+        ¿Qué diferencias y semejanzas hay entre Java y JavaScript?<br>
+        Ambos son lenguajes de programación muy importantes y se usan para crear aplicaciones según el tipo de proyecto. Java es un lenguaje para programar orientado a objetos y se usa mucho en sistemas empresariales o aplicaciones grandes y se ejecuta en máquina. JavaScript se ejecuta en navegadores, tiene tipado dinámico y se usa principalmente en el desarrollo web.<br>
+        <br>
+        ¿Qué métodos tiene el objeto Date? (Menciona al menos 5*)<br>
+        <li>getDate()</li>
+        <li>new Date()</li>
+        <li>Date.now()</li>
+        <li>getHours()</li>
+        <li>getSeconds()</li>
+        <br>
+        ¿Qué métodos tienen los arreglos? (Menciona al menos 5*)<br>
+        <li>pop()</li>
+        <li>push()</li>
+        <li>reduce()</li>
+        <li>reverse()</li>
+        <li>slice()</li>
+        <br>
+        ¿Cómo se declara una variable con alcance local dentro de una función?<br>
+        Se declara usando let, const o var dentro de la función. De manera que la variable solo existe y se puede usar dentro de esa función.<br>
+        <br>
+        ¿Qué implicaciones tiene utilizar variables globales dentro de funciones?<br>
+        Se considera una mala práctica porque se pueden modificar desde cualquier parte del programa, lo que puede causar cambios inesperados y desorganización. También aumenta el riesgo de errores, porque varias funciones pueden usar o cambiar la misma variable y reducen la modularidad del código. <br>
+        <br>
+
+        Referencias<br>
+            <p>
+                Boss, H. A. (2025, 17 diciembre). ¿Qué diferencias hay entre Java y JavaScript? - HACK A BOSS. HACK A BOSS. https://www.hackaboss.com/blog/diferencias-javascript-java 
+Javascript: lista métodos del objeto Date. (s. f.). https://www.aulascript.com/lenguaje/objetos/date/index.htm 
+Array.prototype.Pop() - JavaScript | MDN. (2025, 11 febrero). https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/pop 
+Orji, M. (2017, 6 noviembre). Variable declaration and scoping rules. DEV Community. https://dev.to/simplymichael/variable-declaration-and-scoping-rules-c0k 
+https://www.baeldung.com/cs/global-variables
+            </p>
+        <br>
+        </p>
+
+        <h3> Contáctame </h3>
+        <p> María Fernanda Padmé Lakshmi Martínez Jara <br>
+            A01713328
+        </p>
+
+        <a href="mailto:A01713328@tec.mx">Correo Instutucional</a>
+        </a>
+    </br>
+    </br>
+        <h4> Editor: Visual Studio Code </h4>
+        <script src="index.js"></script>
+    </body>
+</html>
