@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+        <title> Lab 5 </title>
+        <body style="font-family: Helvetica, Arial, sans-serif; margin:40px;"
+            class="bg-gradient-to-r from-blue-400 to-cyan-500">
+
+            <article class="text-balance">
+            <h1 class="font-sans text-3xl font-bold text-500 text-white">
+                Cosas sobre mí
+            </h1>
+            <br>
+            <p class= text-white>
+            Soy una persona creativa, curiosa y analítica. 
+            Estudio Ingeniería en Tecnologías Computacionales en el Tecnológico de Monterrey. 
+            Disfruto de actividades como la fotografía, las actividades extremas, la música y los viajes, que inspiran tanto mi trabajo académico como mis proyectos personales. 
+            Soy aventurera y siempre busco vivir nuevas experiencias, mejorar y dejar una huella positiva en lo que hago.
+            </p>
+            </article>
+            <br>
+            
+            <div class="rounded-xl overflow-hidden w-fit flex border-8 border-double border-white bg-white shadow-lg shadow-white/50">
+            <img src="Laksh.jpeg" width="200" height="246">
+            <img src="flores.jpeg" width="200" height="246">
+            <img src="paracaidas.JPG" width="200" height="246">
+            <img src="cheer.JPEG" width="363" height="252">
+            <img src="stunt.jpeg" width="200" height="252">
+            </div>
+        <br>
+
+        <p class="underline underline-offset-8 text-lg text-white">Lab 5: Frameworks de estilo</p>
+
+        <!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Calculadora simple - Tailwind</title>
+
+  </head>
+
+  <body class="bg-slate-100">
+    <section class="p-6">
+      <div class="max-w-xl mx-auto bg-white p-6 rounded-xl shadow">
+        <h1 class="text-2xl font-bold">Calculadora</h1>
+
+        <div class="mt-6 grid gap-3">
+          <input id="n1" type="number" placeholder="Número 1"
+            class="border p-2 rounded-lg w-full" />
+
+          <input id="n2" type="number" placeholder="Número 2"
+            class="border p-2 rounded-lg w-full" />
+
+          <select id="op" class="border p-2 rounded-lg w-full">
+            <option value="+">Sumar (+)</option>
+            <option value="-">Restar (-)</option>
+            <option value="*">Multiplicar (*)</option>
+            <option value="/">Dividir (/)</option>
+          </select>
+
+          <button id="btn"
+            class="bg-slate-900 text-white p-2 rounded-lg hover:bg-slate-700">
+            Calcular
+          </button>
+
+          <div id="out" class="p-3 rounded-lg bg-slate-50 border text-slate-800">
+            Resultado: ---
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      // Calculadora 
+      document.getElementById("btn").addEventListener("click", () => {
+        const a = Number(document.getElementById("n1").value);
+        const b = Number(document.getElementById("n2").value);
+        const op = document.getElementById("op").value;
+
+        let res;
+
+        if (op === "+") res = a + b;
+        if (op === "-") res = a - b;
+        if (op === "*") res = a * b;
+        if (op === "/") res = (b === 0) ? "No se puede dividir entre 0" : (a / b);
+
+        document.getElementById("out").textContent = "Resultado: " + res;
+      });
+    </script>
+
+        <p class= text-white style="text-align: left;">
+        Describe Material design<br>
+        Material Design es un sistema de diseño desarrollado por Google que busca modernizar estilos antiguos para interfaces digitales y combina elementos planos con profundidad, como capas, sombras y movimiento.<br>
+        <br>
+        
+        <br>
+        Referencias<br>
+            <p class="text-white">
+                croll-behavior - Interactivity. (s. f.). Tailwind CSS. https://tailwindcss.com/docs/scroll-behavior<br>
+        Davidov, S. (2025, 29 diciembre). What Is Material Design and How Should It Be Used? Blog. https://elementor.com/blog/what-is-material-design/
+            </p>
+        <br>
+
+
+        <h3 class= text-white> Contáctame </h3>
+        <p class= text-white> 
+            María Fernanda Padmé Lakshmi Martínez Jara <br>
+            A01713328
+        </p>
+
+        <a class= text-white href="mailto:A01713328@tec.mx">Correo Instutucional</a>
+        </a>
+    </br>
+    </br>
+        <h4 class= text-white> Editor: Visual Studio Code </h4>
+    </body>
+</html>
