@@ -1,0 +1,23 @@
+{
+  "name": "videojuegos",
+  "version": "1.0.0",
+  "description": "Proyecto de apoyo a la clase TC2005B",
+  "keywords": [
+    "TEC"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "(https://github.com/lakshjara/TC2005-Construcci-n-de-Software-y-toma-de-Decisiones-A01713328)"
+  },
+  "license": "MIT",
+  "author": "Lakshmi",
+  "type": "commonjs",
+  "main": "app.js",
+  "scripts": {
+    "start": "node --watch app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
