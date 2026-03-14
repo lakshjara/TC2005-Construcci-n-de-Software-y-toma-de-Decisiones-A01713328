@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Peace Om Love | Tiendita de Velas</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <section class="hero is-small hero-candles">
+    <div class="hero-body">
+      <div class="container has-text-centered">
+        <h1 class="title main-title">Peace Om Love</h1>
+        <p class="subtitle main-subtitle">Tiendita de velas aromáticas artesanales en Querétaro</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+
+      <div class="notification" id="generalHelp">
+        Pasa el cursor sobre una vela para ver su descripción.
+      </div>
+
+      <div class="columns is-multiline">
+
+        <div class="column is-4-desktop is-6-tablet">
+          <div class="card candle-card" id="cardNumeros">
+            <div class="card-image">
+              <figure class="image is-4by3">
+                <img src="numeros.JPG" alt="Vela de números de los ángeles" />
+              </figure>
+            </div>
+            <div class="card-content">
+              <p class="title is-5">Vela de números de los ángeles</p>
+              <p class="subtitle is-6">$295 MXN</p>
+              <p class="product-desc">Aroma fresco y cálido ideal para despejar la mente.</p>
+              <div class="field">
+                <label class="label" for="qtyNumeros">Cantidad</label>
+                <input class="input qty-input" id="qtyNumeros" type="number" min="0" value="0" />
+                <p class="help-text" id="helpNumeros"></p>
+              </div>
+              <button class="button add-btn" data-product="Numeros">Agregar al ticket</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="column is-4-desktop is-6-tablet">
+          <div class="card candle-card" id="cardCalaverita">
+            <div class="card-image">
+              <figure class="image is-4by3">
+                <img src="calaverita.jpg" alt="Vela de calaverita de azúcar" />
+              </figure>
+            </div>
+            <div class="card-content">
+              <p class="title is-5">Vela de calaverita de azúcar</p>
+              <p class="subtitle is-6">$95 MXN</p>
+              <p class="product-desc">Aroma a cempasúchil, perfecta para el altar de Día de Muertos.</p>
+              <div class="field">
+                <label class="label" for="qtyCalaverita">Cantidad</label>
+                <input class="input qty-input" id="qtyCalaverita" type="number" min="0" value="0" />
+                <p class="help-text" id="helpCalaverita"></p>
+              </div>
+              <button class="button add-btn" data-product="Calaverita">Agregar al ticket</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="column is-4-desktop is-6-tablet">
+          <div class="card candle-card" id="cardCafCan">
+            <div class="card-image">
+              <figure class="image is-4by3">
+                <img src="cafe.JPG" alt="Vela de Café y Canela" />
+              </figure>
+            </div>
+            <div class="card-content">
+              <p class="title is-5">Vela de Café y Canela</p>
+              <p class="subtitle is-6">$295 MXN</p>
+              <p class="product-desc">Aroma a café, clavo, vainilla y canela, con sensación cálida y hogareña.</p>
+              <div class="field">
+                <label class="label" for="qtyCafCan">Cantidad</label>
+                <input class="input qty-input" id="qtyCafCan" type="number" min="0" value="0" />
+                <p class="help-text" id="helpCafCan"></p>
+              </div>
+              <button class="button add-btn" data-product="CafCan">Agregar al ticket</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="box ticket-box">
+        <div class="level">
+          <div class="level-left">
+            <h2 class="title is-4">Tu ticket</h2>
+          </div>
+          <div class="level-right">
+            <button class="button is-light" id="clearTicketBtn">Vaciar ticket</button>
+          </div>
+        </div>
+
+        <table class="table is-fullwidth">
+          <thead>
+            <tr>
+              <th>Producto</th><th>Precio</th><th>Cantidad</th><th>Subtotal</th>
+            </tr>
+          </thead>
+          <tbody id="ticketBody">
+            <tr><td colspan="4" class="has-text-centered">Aún no has agregado productos.</td></tr>
+          </tbody>
+        </table>
+
+        <div class="totals-box">
+          <p><strong>Subtotal:</strong> <span id="subtotal">$0.00</span></p>
+          <p><strong>IVA (16%):</strong> <span id="iva">$0.00</span></p>
+          <p class="total-final"><strong>Total:</strong> <span id="total">$0.00</span></p>
+        </div>
+
+        <button class="button is-dark mt-4" id="confirmBtn">Confirmar compra</button>
+
+        <article class="message is-success is-hidden mt-3" id="finalMessage">
+          <div class="message-body" id="finalMessageText"></div>
+        </article>
+      </div>
+
+      <div class="box mt-5">
+        <h2 class="title is-5">Preguntas del laboratorio</h2>
+        <p><strong>¿Por qué es buena práctica validar inputs con JavaScript antes de enviar al servidor?</strong><br />
+        Mejora la experiencia del usuario, ya que JavaScript puede revisar errores antes de mandar todo al servidor, de manera que el usuario recibe el error al instante y no tiene que esperar a que cargue otra vez la página.</p>
+        <br />
+        <p><strong>¿Cómo puedes saltarte validaciones hechas solo con JavaScript?</strong><br />
+        Desactivando JS en el navegador, o también editando el código desde las herramientas del desarrollador. La validación con JavaScript es buena como primer filtro, pero la validación realmente importante siempre debe hacerse también en el servidor.</p>
+        <br />
+        <p><strong>Fuentes:</strong>
+          <a href="https://bulma.io/" target="_blank">Bulma</a>,
+          <a href="https://www.w3schools.com/js/" target="_blank">W3Schools</a>
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <script src="index.js"></script>
+</body>
+</html>

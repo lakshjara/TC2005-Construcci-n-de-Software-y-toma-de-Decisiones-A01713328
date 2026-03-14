@@ -1,0 +1,31 @@
+body {
+  background: #0b0d14;
+  color: #f5f5f5;
+}
+
+.candle-card {
+  background: #111522;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.candle-card .card-image {
+  overflow: hidden;
+}
+
+.candle-card .card-image img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+}
+
+.candle-card .card-content {
+  background: #111522;
+}
+
+.main-subtitle,
+.subtitle,
+.product-description {
+  color: #b8b8c7 !important;
+}
