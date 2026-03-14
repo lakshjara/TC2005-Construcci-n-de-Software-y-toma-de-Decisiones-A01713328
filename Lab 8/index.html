@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>Luis Miguel Trivia</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      background-color: #111;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    h1, h2, h3, p { color: #f0e0b0; }
+    /* estilo para las preguntas */
+    .pregunta { cursor: pointer; border-bottom: 1px solid #333; padding: 14px 0; }
+    .pregunta:hover { color: #c9a84c; }
+    /* respuestas ocultas por defecto */
+    .respuesta { display: none; color: #aaa; padding: 8px 0 4px 12px; font-style: italic; }
+  </style>
+</head>
+<body>
+
+  <section class="section">
+    <div class="container">
+        
+      <div class="columns is-vcentered">
+        <div class="column is-narrow">
+        </div>
+        <div class="column">
+          <h1 class="title is-2" style="font-family:'Cormorant Garamond',serif; color:#c9a84c;">Luis Miguel</h1>
+          <p class="subtitle" style="color:#888; font-style:italic;">Sobre El Sol de México</p>
+        </div>
+      </div>
+
+      <hr style="background:#333;" />
+
+      <h3 class="pregunta" onclick="mostrarRespuesta('r1')">1. ¿Cuál es su nombre completo?</h3>
+      <p class="respuesta" id="r1">Luis Miguel Gallego Basteri.</p>
+
+      <h3 class="pregunta" onclick="mostrarRespuesta('r2')">2. ¿Dónde nació?</h3>
+      <p class="respuesta" id="r2">San Juan, Puerto Rico, el 19 de abril de 1970.</p>
+
+      <h3 class="pregunta" onclick="mostrarRespuesta('r3')">3. ¿A qué edad debutó?</h3>
+      <p class="respuesta" id="r3">A los 11 años con el sencillo "1+1=2 enamorados".</p>
+
+      <h3 class="pregunta" onclick="mostrarRespuesta('r4')">4. ¿Por qué lo llaman El Sol de México?</h3>
+      <p class="respuesta" id="r4">Por su carisma en el escenario y su enorme popularidad en México.</p>
+
+      <h3 class="pregunta" onclick="mostrarRespuesta('r5')">5. ¿Cuál es su álbum más famoso?</h3>
+      <p class="respuesta" id="r5">Romance (1991), primer álbum en español en llegar al #1 en varios países.</p>
+
+      <h3 class="pregunta" onclick="mostrarRespuesta('r6')">6. ¿Cuántos Grammys ha ganado?</h3>
+      <p class="respuesta" id="r6">A lo largo de su carrera, Luis Miguel ha ganado cinco premios Grammy y seis Latin Grammy.</p>
+
+    </div>
+  </section>
+
+  <script>
+    // funcion para mostrar u ocultar la respuesta
+    function mostrarRespuesta(id) {
+      const respuesta = document.getElementById(id);
+      if (respuesta.style.display === 'none') {
+        respuesta.style.display = 'block';
+      } else {
+        respuesta.style.display = 'none';
+      }
+    }
+  </script>
+
+</body>
+</html>
