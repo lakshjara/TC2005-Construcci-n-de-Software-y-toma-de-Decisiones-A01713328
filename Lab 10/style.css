@@ -1,0 +1,106 @@
+body {
+  background-color: #1a1a2e;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.section {
+  padding: 2rem 1.5rem;
+}
+
+.title {
+  color: #e2c27d;
+}
+
+.subtitle {
+  color: #a89060;
+}
+
+.card {
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #16213e;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.5);
+}
+
+.card-image img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.card-content {
+  padding: 0.75rem 1rem;
+  background-color: #16213e;
+}
+
+.card-content .title {
+  font-size: 0.95rem;
+  margin-bottom: 0.1rem;
+  color: #e2c27d;
+}
+
+.card-content .subtitle {
+  font-size: 0.8rem;
+  color: #8a7a50;
+}
+
+.button {
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.button.is-primary {
+  background-color: #c9a84c;
+  border-color: transparent;
+  color: #1a1a2e;
+  font-weight: bold;
+}
+
+.button.is-primary:hover {
+  background-color: #b8943c;
+}
+
+.button.is-warning {
+  background-color: #e2c27d;
+  color: #1a1a2e;
+  font-weight: bold;
+}
+
+.button.is-warning:hover {
+  background-color: #d4b06a;
+}
+
+.button.is-light {
+  background-color: #2a2a4a;
+  color: #e2c27d;
+  border: 1px solid #e2c27d;
+}
+
+.button.is-light:hover {
+  background-color: #3a3a5a;
+}
+
+.input {
+  background-color: #16213e;
+  border-color: #c9a84c;
+  color: #e2c27d;
+}
+
+.input::placeholder {
+  color: #6a5a30;
+}
+
+.input:focus {
+  border-color: #e2c27d;
+  box-shadow: 0 0 0 2px rgba(226, 194, 125, 0.25);
+}
+
+.label {
+  color: #c9a84c;
+}
