@@ -1,0 +1,21 @@
+{
+  "name": "tc2005-construcci-n-de-software-y-toma-de-decisiones-a01713328",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lakshjara/TC2005-Construcci-n-de-Software-y-toma-de-Decisiones-A01713328.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/lakshjara/TC2005-Construcci-n-de-Software-y-toma-de-Decisiones-A01713328/issues"
+  },
+  "homepage": "https://github.com/lakshjara/TC2005-Construcci-n-de-Software-y-toma-de-Decisiones-A01713328#readme"
+}

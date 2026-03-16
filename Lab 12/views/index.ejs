@@ -1,0 +1,25 @@
+<%- include('includes/head.ejs') %>
+<%- include('includes/nav.ejs') %>
+
+<section class="section">
+  <div class="container">
+    <h1 class="title"><%= tituloPagina %></h1>
+    <p class="subtitle"><%= nombre %></p>
+
+    <div class="content">
+      <h2 class="title is-4 mt-4">¿Qué otros templating engines existen para node?</h2>
+      <p>
+        Algunos otros templating engines que existen para Node.js son Pug, Handlebars, Mustache y Nunjucks. Todos permiten generar HTML dinámico desde el servidor, pero cada uno tiene una sintaxis diferente. 
+      </p>
+    </div>
+
+    <div class="buttons mt-4">
+      <a href="/canciones" class="button is-dark">Ver canciones</a>
+      <a href="/canciones/new" class="button is-dark">Agregar canción</a>
+      <a href="/albumes" class="button is-dark">Ver álbumes</a>
+      <a href="/albumes/new" class="button is-dark">Agregar álbum</a>
+    </div>
+  </div>
+</section>
+
+<%- include('includes/footer.ejs') %>
