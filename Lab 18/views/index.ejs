@@ -1,0 +1,28 @@
+<%- include('includes/head.ejs') %>
+<%- include('includes/nav.ejs') %>
+<section class="section">
+  <div class="container">
+    <h1 class="title"><%= tituloPagina %></h1>
+    <p class="subtitle"><%= nombre %></p>
+    <div class="content">
+      <h2 class="title is-4 mt-4">¿Qué otras formas de autentificación existen?</h2>
+      <p>
+        Además de la autenticación con usuario y contraseña, existen otras formas como usar proveedores externos (Google, GitHub o Facebook) mediante OAuth, donde básicamente inicias sesión con una cuenta que ya tienes. También está la autenticación biométrica, como huella digital o reconocimiento facial, muy común en apps móviles. Otra opción son los tokens JWT, que se usan mucho en APIs para validar al usuario sin necesidad de guardar sesiones en el servidor.
+      </p>
+    </div>
+    <% if (isLoggedIn) { %>
+      <div class="buttons mt-4">
+        <a href="/canciones" class="button is-dark">Ver canciones</a>
+        <a href="/canciones/new" class="button is-dark">Agregar canción</a>
+        <a href="/albumes" class="button is-dark">Ver álbumes</a>
+        <a href="/albumes/new" class="button is-dark">Agregar álbum</a>
+      </div>
+    <% } else { %>
+      <div class="buttons mt-4">
+        <a href="/users/login" class="button is-dark">Iniciar sesión</a>
+        <a href="/users/signup" class="button is-dark">Crear cuenta</a>
+      </div>
+    <% } %>
+  </div>
+</section>
+<%- include('includes/footer.ejs') %>
