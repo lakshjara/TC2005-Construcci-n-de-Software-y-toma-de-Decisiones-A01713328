@@ -1,0 +1,35 @@
+<%- include('includes/head.ejs') %>
+<%- include('includes/nav.ejs') %>
+
+<section class="section">
+  <div class="container">
+    <h1 class="title">Discografía</h1>
+    <p class="subtitle"><%= albumes.length %> álbumes guardados</p>
+
+    <div class="buttons mb-5">
+      <a href="/albumes/new" class="button is-primary">Agregar álbum</a>
+      <a href="/" class="button is-light">Inicio</a>
+    </div>
+
+    <div class="columns is-multiline">
+      <% for (let album of albumes) { %>
+        <div class="column is-one-quarter-desktop is-half-tablet">
+          <div class="card tarjeta">
+            <div class="card-image">
+              <figure class="image is-1by1">
+                <img src="<%= album.imagen %>" alt="Portada de <%= album.titulo %>">
+              </figure>
+            </div>
+            <div class="card-content">
+              <p class="title is-5"><%= album.titulo %></p>
+              <p class="subtitle is-6"><%= album.artista %></p>
+              <p class="has-text-grey"><%= album.anio %></p>
+            </div>
+          </div>
+        </div>
+      <% } %>
+    </div>
+  </div>
+</section>
+
+<%- include('includes/footer.ejs') %>

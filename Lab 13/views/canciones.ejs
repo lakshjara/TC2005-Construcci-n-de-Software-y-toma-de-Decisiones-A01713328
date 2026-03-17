@@ -1,0 +1,39 @@
+<%- include('includes/head.ejs') %>
+<%- include('includes/nav.ejs') %>
+
+<section class="section">
+  <div class="container">
+    <h1 class="title">Playlist para pasar el bloque con 100</h1>
+    <p class="subtitle"><%= canciones.length %> canciones guardadas</p>
+
+    <div class="buttons mb-5">
+      <a href="/canciones/new" class="button is-primary">Agregar canción</a>
+      <a href="/" class="button is-light">Inicio</a>
+    </div>
+
+    <div class="columns is-multiline">
+      <% for (let cancion of canciones) { %>
+        <div class="column is-one-quarter-desktop is-half-tablet">
+          <div class="card tarjeta">
+            <div class="card-image">
+              <figure class="image is-1by1">
+                <img src="<%= cancion.imagen %>" alt="Portada de <%= cancion.titulo %>">
+              </figure>
+            </div>
+            <div class="card-content">
+              <p class="title is-5"><%= cancion.titulo %></p>
+              <p class="subtitle is-6"><%= cancion.artista %></p>
+
+              <form action="/canciones/delete" method="POST" class="mt-3">
+                <input type="hidden" name="titulo" value="<%= cancion.titulo %>">
+                <button class="button is-danger is-small" type="submit">Eliminar</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      <% } %>
+    </div>
+  </div>
+</section>
+
+<%- include('includes/footer.ejs') %>
