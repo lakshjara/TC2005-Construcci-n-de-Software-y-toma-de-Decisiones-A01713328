@@ -1,0 +1,23 @@
+<%- include('includes/head.ejs') %>
+<%- include('includes/nav.ejs') %>
+<section class="section">
+  <div class="container">
+    <div class="columns">
+      <div class="column is-one-third">
+        <figure class="image is-1by1">
+          <img src="<%= cancion.imagen %>" alt="Portada de <%= cancion.titulo %>">
+        </figure>
+      </div>
+      <div class="column">
+        <h1 class="title"><%= cancion.titulo %></h1>
+        <p class="subtitle"><%= cancion.artista %></p>
+        <p class="has-text-grey is-size-7">Agregada el <%= new Date(cancion.created_at).toLocaleDateString('es-MX') %></p>
+        <div class="buttons mt-5">
+          <a href="/canciones/<%= cancion.id %>/edit" class="button is-warning">Editar</a>
+          <a href="/canciones" class="button is-light">Volver</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<%- include('includes/footer.ejs') %>

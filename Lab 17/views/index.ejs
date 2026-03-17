@@ -1,0 +1,31 @@
+<%- include('includes/head.ejs') %>
+<%- include('includes/nav.ejs') %>
+<section class="section">
+  <div class="container">
+    <h1 class="title"><%= tituloPagina %></h1>
+    <p class="subtitle"><%= nombre %></p>
+    <div class="content">
+      <h2 class="title is-4 mt-4">¿Qué ventajas tiene escribir el código SQL únicamente en la capa del modelo?</h2>
+      <p>
+        Hace que el código sea más fácil de mantener, porque si en algún momento
+        se necesita cambiar la estructura de la base de datos, solo hay que modificar el modelo y no tocar
+        el controlador ni la vista, también ayuda a que el código esté mejor organizado y sea más legible.
+      </p>
+      <h2 class="title is-4 mt-4">¿Qué es SQL injection y cómo se puede prevenir?</h2>
+      <p>
+        Es un tipo de ataque en el que alguien introduce código SQL malicioso en un campo del formulario
+        para manipular la base de datos, por ejemplo borrando tablas o accediendo a información que no debería ver.
+        Se puede prevenir usando consultas parametrizadas, que es lo que hace el método execute() de
+        mysql2 cuando se pasan los valores como un arreglo separado del query. De esa forma, aunque el usuario
+        intente meter código SQL, se trata como texto plano y no se ejecuta.
+      </p>
+    </div>
+    <div class="buttons mt-4">
+      <a href="/canciones" class="button is-dark">Ver canciones</a>
+      <a href="/canciones/new" class="button is-dark">Agregar canción</a>
+      <a href="/albumes" class="button is-dark">Ver álbumes</a>
+      <a href="/albumes/new" class="button is-dark">Agregar álbum</a>
+    </div>
+  </div>
+</section>
+<%- include('includes/footer.ejs') %>
