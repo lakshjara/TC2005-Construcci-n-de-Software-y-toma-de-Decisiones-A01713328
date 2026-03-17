@@ -1,0 +1,22 @@
+<%- include('includes/head.ejs') %>
+<%- include('includes/nav.ejs') %>
+
+<section class="section">
+  <div class="container">
+    <h1 class="title">Iniciar sesión</h1>
+    <p class="subtitle">Escribe tu nombre para guardar la sesión</p>
+
+    <form action="/users/login" method="POST">
+      <div class="field">
+        <label class="label">Nombre de usuario</label>
+        <div class="control">
+          <input class="input" type="text" name="username" placeholder="e.g. Lakshmi">
+        </div>
+      </div>
+
+      <button class="button is-primary" type="submit">Entrar</button>
+    </form>
+  </div>
+</section>
+
+<%- include('includes/footer.ejs') %>
