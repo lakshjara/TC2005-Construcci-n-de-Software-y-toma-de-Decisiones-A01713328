@@ -1,4 +1,4 @@
-// Lab 19: Role Based Access Control (RBAC)
+// Lab 22: Archivos
 // A01713328 María Fernanda Padmé Lakshmi Martínez Jara
 
 const express = require('express');
@@ -6,6 +6,8 @@ const bodyParser = require('body-parser');
 const path = require('path');
 const session = require('express-session');
 const csrf = require('csurf');
+const multer = require('multer');
+
 const cancionesRoutes = require('./routes/canciones.routes');
 const albumesRoutes = require('./routes/albumes.routes');
 const usersRoutes = require('./routes/users.routes');
@@ -15,10 +17,38 @@ const app = express();
 app.set('view engine', 'ejs');
 app.set('views', 'views');
 
+const fileStorage = multer.diskStorage({
+  destination: (req, file, cb) => {
+    cb(null, 'public/uploads');
+  },
+  filename: (req, file, cb) => {
+    cb(null, Date.now() + '-' + file.originalname);
+  }
+});
+
+const fileFilter = (req, file, cb) => {
+  if (
+    file.mimetype === 'image/png' ||
+    file.mimetype === 'image/jpg' ||
+    file.mimetype === 'image/jpeg'
+  ) {
+    cb(null, true);
+  } else {
+    cb(null, false);
+  }
+};
+
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
+
+app.use(
+  multer({
+    storage: fileStorage
+  }).single('imagen')
+);
+
 app.use(session({
-  secret: 'lab18 string secreto largo para canciones y albumes',
+  secret: 'lab22 string secreto largo para canciones y albumes',
   resave: false,
   saveUninitialized: false
 }));
@@ -39,7 +69,7 @@ app.use('/albumes', albumesRoutes);
 
 app.get('/', (req, res) => {
   res.render('index', {
-    tituloPagina: 'Laboratorio 19',
+    tituloPagina: 'Laboratorio 22',
     nombre: 'A01713328 María Fernanda Padmé Lakshmi Martínez Jara'
   });
 });

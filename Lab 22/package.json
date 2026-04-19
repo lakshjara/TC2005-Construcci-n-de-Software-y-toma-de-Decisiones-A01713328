@@ -1,22 +1,23 @@
 {
-  "name": "lab-19",
+  "name": "lab-22",
   "version": "1.0.0",
-  "description": "Lab 19: Role Based Access Control (RBAC)",
+  "description": "En esta actividad exploraremos el manejor de archivos con node + express",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "María Fernanda Padmé Lakshmi Martínez Jara",
+  "author": "Lakshmi Jara",
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
     "bcryptjs": "^3.0.3",
     "body-parser": "^2.2.2",
     "csurf": "^1.11.0",
-    "ejs": "^5.0.1",
+    "ejs": "^5.0.2",
     "express": "^5.2.1",
     "express-session": "^1.19.0",
-    "mysql2": "^3.20.0"
+    "multer": "^2.1.1",
+    "mysql2": "^3.22.1"
   }
 }

@@ -5,15 +5,15 @@
   <div class="container">
     <h1 class="title">Nueva canción</h1>
 
-    <form action="/canciones/new" method="POST">
+    <form action="/canciones/new" method="POST" enctype="multipart/form-data">
       <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+
       <div class="field">
         <label class="label">Título</label>
         <div class="control">
           <input class="input" type="text" name="titulo" placeholder="e.g. La Incondicional">
         </div>
       </div>
-
 
       <div class="field">
         <label class="label">Artista</label>
@@ -23,9 +23,9 @@
       </div>
 
       <div class="field">
-        <label class="label">URL de la portada</label>
+        <label class="label">Imagen</label>
         <div class="control">
-          <input class="input" type="text" name="imagen" placeholder="https://...">
+          <input class="input" type="file" name="imagen" accept=".png,.jpg,.jpeg,.webp">
         </div>
       </div>
 
