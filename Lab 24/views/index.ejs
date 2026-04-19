@@ -1,24 +1,38 @@
 <%- include('includes/head.ejs') %>
 <%- include('includes/nav.ejs') %>
+
 <section class="section">
   <div class="container">
     <h1 class="title"><%= tituloPagina %></h1>
     <p class="subtitle"><%= nombre %></p>
+
     <div class="content">
-      <h2 class="title is-4 mt-4">¿En qué consiste el control de acceso basado en roles?</h2>
+      <h2 class="title is-4 mt-4">¿Qué importancia tiene AJAX en el desarrollo de RIA's (Rich Internet Applications)?</h2>
       <p>
-        Es un modelo en el que los permisos no se asignan directamente a los usuarios, sino a roles, y los usuarios reciben uno o más roles. 
-        Esto hace que sea mucho más fácil administrar los permisos porque si se necesita cambiar lo que puede hacer un tipo de usuario, solo se modifica el rol y no cada usuario
-        individualmente.
+        AJAX es importante en el desarrollo de aplicaciones ricas de internet porque permite actualizar partes específicas de una página sin recargarla completa. 
+        Esto hace que la interacción sea más rápida, fluida y dinámica para el usuario, mejorando la experiencia general y haciendo que el sitio se sienta más moderno e interactivo.
       </p>
-      <h2 class="title is-4 mt-4">Sistemas con y sin RBAC</h2>
+
+      <h2 class="title is-4 mt-4">¿Qué implicaciones de seguridad tiene AJAX? ¿Dónde se deben hacer las validaciones de seguridad, del lado del cliente o del lado del servidor?</h2>
       <p>
-        Un ejemplo de sistema que aplica RBAC es una plataforma empresarial como un sistema de gestión interna, donde los usuarios tienen roles (administrador, empleado, cliente) 
-        y cada rol define qué acciones pueden realizar, lo que facilita el control de acceso, mejora la seguridad y simplifica la administración.
-        Por otro lado, un sistema sin RBAC sería uno donde los permisos se asignan directamente a cada usuario, lo que permite mayor flexibilidad y personalización, pero se vuelve difícil de administrar, 
-        más propenso a errores y menos seguro conforme crece el número de usuarios.
+        AJAX implica riesgos de seguridad similares a cualquier otra comunicación entre cliente y servidor, como manipulación de datos, acceso no autorizado o envío de información maliciosa. 
+        Por eso, aunque en el cliente se pueden hacer validaciones para mejorar la experiencia del usuario, las validaciones de seguridad más importantes siempre deben realizarse del lado del servidor, 
+        ya que el cliente puede ser modificado fácilmente por cualquier usuario.
+      </p>
+
+      <h2 class="title is-4 mt-4">¿Qué es JSON?</h2>
+      <p>
+        JSON es un formato ligero de intercambio de datos que organiza la información en pares de clave y valor. 
+        Es muy utilizado en aplicaciones web porque es fácil de leer para las personas y sencillo de procesar tanto en JavaScript como en el servidor.
+      </p>
+
+      <h2 class="title is-4 mt-4">Componente AJAX utilizado en este laboratorio</h2>
+      <p>
+        En este laboratorio se implementó un componente AJAX para realizar una búsqueda asíncrona de canciones por artista. 
+        Este componente se comunica con el servidor mediante fetch, recibe una respuesta en formato JSON y actualiza una parte de la página sin necesidad de recargarla completa.
       </p>
     </div>
+
     <% if (isLoggedIn) { %>
       <div class="buttons mt-4">
         <a href="/canciones" class="button is-dark">Ver canciones</a>
@@ -32,4 +46,5 @@
     <% } %>
   </div>
 </section>
+
 <%- include('includes/footer.ejs') %>

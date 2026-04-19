@@ -69,7 +69,7 @@ app.use('/albumes', albumesRoutes);
 
 app.get('/', (req, res) => {
   res.render('index', {
-    tituloPagina: 'Laboratorio 22',
+    tituloPagina: 'Laboratorio 24',
     nombre: 'A01713328 María Fernanda Padmé Lakshmi Martínez Jara'
   });
 });
