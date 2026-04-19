@@ -1,0 +1,35 @@
+<%- include('includes/head.ejs') %>
+<%- include('includes/nav.ejs') %>
+<section class="section">
+  <div class="container">
+    <h1 class="title"><%= tituloPagina %></h1>
+    <p class="subtitle"><%= nombre %></p>
+    <div class="content">
+      <h2 class="title is-4 mt-4">¿En qué consiste el control de acceso basado en roles?</h2>
+      <p>
+        Es un modelo en el que los permisos no se asignan directamente a los usuarios, sino a roles, y los usuarios reciben uno o más roles. 
+        Esto hace que sea mucho más fácil administrar los permisos porque si se necesita cambiar lo que puede hacer un tipo de usuario, solo se modifica el rol y no cada usuario
+        individualmente.
+      </p>
+      <h2 class="title is-4 mt-4">Sistemas con y sin RBAC</h2>
+      <p>
+        Un ejemplo de sistema que aplica RBAC es una plataforma empresarial como un sistema de gestión interna, donde los usuarios tienen roles (administrador, empleado, cliente) 
+        y cada rol define qué acciones pueden realizar, lo que facilita el control de acceso, mejora la seguridad y simplifica la administración.
+        Por otro lado, un sistema sin RBAC sería uno donde los permisos se asignan directamente a cada usuario, lo que permite mayor flexibilidad y personalización, pero se vuelve difícil de administrar, 
+        más propenso a errores y menos seguro conforme crece el número de usuarios.
+      </p>
+    </div>
+    <% if (isLoggedIn) { %>
+      <div class="buttons mt-4">
+        <a href="/canciones" class="button is-dark">Ver canciones</a>
+        <a href="/albumes" class="button is-dark">Ver álbumes</a>
+      </div>
+    <% } else { %>
+      <div class="buttons mt-4">
+        <a href="/users/login" class="button is-dark">Iniciar sesión</a>
+        <a href="/users/signup" class="button is-dark">Crear cuenta</a>
+      </div>
+    <% } %>
+  </div>
+</section>
+<%- include('includes/footer.ejs') %>

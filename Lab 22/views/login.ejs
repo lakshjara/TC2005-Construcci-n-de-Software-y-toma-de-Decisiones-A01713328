@@ -1,0 +1,32 @@
+<%- include('includes/head.ejs') %>
+<%- include('includes/nav.ejs') %>
+<section class="section">
+  <div class="container">
+    <h1 class="title">Iniciar sesión</h1>
+    <% if (error && error !== '') { %>
+      <div class="notification is-danger">
+        <%= error %>
+      </div>
+    <% } %>
+    <form action="/users/login" method="POST">
+      <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+      <div class="field">
+        <label class="label">Usuario</label>
+        <div class="control">
+          <input class="input" type="text" name="username" placeholder="e.g. lakshmi" required>
+        </div>
+      </div>
+      <div class="field">
+        <label class="label">Password</label>
+        <div class="control">
+          <input class="input" type="password" name="password" required>
+        </div>
+      </div>
+      <div class="buttons">
+        <button class="button is-primary" type="submit">Entrar</button>
+        <a href="/users/signup" class="button is-light">Crear cuenta</a>
+      </div>
+    </form>
+  </div>
+</section>
+<%- include('includes/footer.ejs') %>
