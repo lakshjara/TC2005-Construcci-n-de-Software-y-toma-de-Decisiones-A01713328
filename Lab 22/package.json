@@ -1,7 +1,7 @@
 {
   "name": "lab-22",
   "version": "1.0.0",
-  "description": "En esta actividad exploraremos el manejor de archivos con node + express",
+  "description": "Archivos: En esta actividad exploraremos el manejor de archivos con node + express",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
