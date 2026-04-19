@@ -1,0 +1,24 @@
+<%- include('includes/head.ejs') %>
+<%- include('includes/nav.ejs') %>
+<section class="section">
+  <div class="container">
+    <div class="columns">
+      <div class="column is-one-third">
+        <figure class="image is-1by1">
+          <img src="/uploads/<%= album.imagen %>" alt="Portada de <%= album.titulo %>">
+        </figure>
+      </div>
+      <div class="column">
+        <h1 class="title"><%= album.titulo %></h1>
+        <p class="subtitle"><%= album.artista %></p>
+        <p class="has-text-grey"><%= album.anio %></p>
+        <p class="has-text-grey is-size-7">Agregado el <%= new Date(album.created_at).toLocaleDateString('es-MX') %></p>
+        <div class="buttons mt-5">
+          <a href="/albumes/<%= album.id %>/edit" class="button is-warning">Editar</a>
+          <a href="/albumes" class="button is-light">Volver</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<%- include('includes/footer.ejs') %>
