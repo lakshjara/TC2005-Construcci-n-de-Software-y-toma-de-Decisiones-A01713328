@@ -132,3 +132,18 @@ exports.post_delete = (req, res, next) => {
       next(err);
     });
 };
+
+exports.post_search_ajax = (req, res, next) => {
+  const artista = (req.body.artista || '').trim();
+
+  Cancion.findByArtist(artista)
+      .then(([rows]) => {
+          res.status(200).json({
+              canciones: rows
+          });
+      })
+      .catch(err => {
+          console.log(err);
+          res.status(500).json({ mensaje: 'Error' });
+      });
+};

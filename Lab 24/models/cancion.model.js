@@ -32,4 +32,12 @@ module.exports = class Cancion {
     static deleteById(id) {
         return db.execute('DELETE FROM canciones WHERE id = ?', [id]);
     }
+
+    static findByArtist(artista) {
+        return db.execute(
+            'SELECT * FROM canciones WHERE artista LIKE ?',
+            [`%${artista}%`]
+        );
+    }
 };
+
