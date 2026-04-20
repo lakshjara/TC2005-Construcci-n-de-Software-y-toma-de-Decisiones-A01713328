@@ -1,0 +1,40 @@
+<%- include('includes/head.ejs') %>
+<%- include('includes/nav.ejs') %>
+
+<section class="section">
+  <div class="container">
+    <h1 class="title">Nueva canción</h1>
+
+    <form action="/canciones/new" method="POST" enctype="multipart/form-data">
+      <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+
+      <div class="field">
+        <label class="label">Título</label>
+        <div class="control">
+          <input class="input" type="text" name="titulo" placeholder="e.g. La Incondicional">
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label">Artista</label>
+        <div class="control">
+          <input class="input" type="text" name="artista" placeholder="e.g. Luis Miguel">
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label">Imagen</label>
+        <div class="control">
+          <input class="input" type="file" name="imagen" accept=".png,.jpg,.jpeg,.webp">
+        </div>
+      </div>
+
+      <div class="buttons">
+        <button class="button is-primary" type="submit">Guardar canción</button>
+        <a href="/canciones" class="button is-light">Cancelar</a>
+      </div>
+    </form>
+  </div>
+</section>
+
+<%- include('includes/footer.ejs') %>

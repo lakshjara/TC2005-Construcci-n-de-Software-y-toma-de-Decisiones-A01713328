@@ -1,0 +1,48 @@
+<%- include('includes/head.ejs') %>
+<%- include('includes/nav.ejs') %>
+<section class="section">
+  <div class="container">
+    <h1 class="title">Crear cuenta</h1>
+    <form action="/users/signup" method="POST">
+      <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+      <div class="field">
+        <label class="label">Usuario</label>
+        <div class="control">
+          <input class="input" type="text" name="username" placeholder="e.g. lakshmi" required>
+        </div>
+      </div>
+      <div class="field">
+        <label class="label">Password</label>
+        <div class="control">
+          <input class="input" type="password" name="password" id="password" required>
+        </div>
+      </div>
+      <div class="field">
+        <label class="label">Confirmar password</label>
+        <div class="control">
+          <input class="input" type="password" name="password_confirm" id="password_confirm" required>
+        </div>
+      </div>
+      <div id="dont_match" class="notification is-warning" style="display:none;">
+        Las contraseñas no coinciden
+      </div>
+      <div class="buttons">
+        <button class="button is-primary" type="submit">Registrarse</button>
+        <a href="/users/login" class="button is-light">Ya tengo cuenta</a>
+      </div>
+    </form>
+  </div>
+</section>
+<script>
+    const password_confirm = document.getElementById('password_confirm');
+    const password = document.getElementById('password');
+    const dont_match = document.getElementById('dont_match');
+    password_confirm.onkeyup = () => {
+        if (password_confirm.value !== password.value) {
+            dont_match.style.display = 'block';
+        } else {
+            dont_match.style.display = 'none';
+        }
+    };
+</script>
+<%- include('includes/footer.ejs') %>
