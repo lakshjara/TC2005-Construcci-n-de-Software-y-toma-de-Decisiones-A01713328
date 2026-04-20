@@ -1,4 +1,4 @@
-// Lab 24: AJAX
+// Lab 26: Servicios web
 // A01713328 María Fernanda Padmé Lakshmi Martínez Jara
 
 const express = require('express');
@@ -11,6 +11,7 @@ const multer = require('multer');
 const cancionesRoutes = require('./routes/canciones.routes');
 const albumesRoutes = require('./routes/albumes.routes');
 const usersRoutes = require('./routes/users.routes');
+const mapaRoutes = require('./routes/mapa.routes');
 
 const app = express();
 
@@ -70,10 +71,12 @@ app.use('/albumes', albumesRoutes);
 
 app.get('/', (req, res) => {
   res.render('index', {
-    tituloPagina: 'Laboratorio 24',
+    tituloPagina: 'Laboratorio 26',
     nombre: 'A01713328 María Fernanda Padmé Lakshmi Martínez Jara'
   });
 });
+
+app.use('/mapa', mapaRoutes);
 
 app.use((err, req, res, next) => {
   console.log(err);
