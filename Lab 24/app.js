@@ -1,4 +1,4 @@
-// Lab 22: Archivos
+// Lab 24: AJAX
 // A01713328 María Fernanda Padmé Lakshmi Martínez Jara
 
 const express = require('express');
