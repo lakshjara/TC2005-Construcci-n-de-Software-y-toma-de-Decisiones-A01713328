@@ -1,0 +1,49 @@
+<%- include('includes/head.ejs') %>
+<%- include('includes/nav.ejs') %>
+
+<section class="section">
+  <div class="container">
+    <h1 class="title">Mapa musical</h1>
+    <p class="subtitle">
+      Este componente integra Google Maps como servicio web de terceros dentro de la aplicación.
+    </p>
+
+    <div class="content mb-4">
+      <p>
+        En este mapa se muestran algunos lugares importantes para conciertos y eventos musicales.
+      </p>
+    </div>
+
+    <div id="map" style="width: 100%; height: 500px; border-radius: 12px;"></div>
+  </div>
+</section>
+
+<script>
+  function initMap() {
+    const centro = { lat: 19.4326, lng: -99.1332 };
+
+    const map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 11,
+      center: centro
+    });
+
+    const lugares = [
+      { position: { lat: 19.4245, lng: -99.1948 }, title: 'Auditorio Nacional' },
+      { position: { lat: 19.4042, lng: -99.0996 }, title: 'Palacio de los Deportes' },
+      { position: { lat: 19.4049, lng: -99.0919 }, title: 'Foro Sol / Estadio GNP' },
+      { position: { lat: 19.4960, lng: -99.1742 }, title: 'Arena CDMX' }
+    ];
+
+    lugares.forEach((lugar) => {
+      new google.maps.Marker({
+        position: lugar.position,
+        map: map,
+        title: lugar.title
+      });
+    });
+  }
+</script>
+
+<script async src="https://maps.googleapis.com/maps/api/js?key=<%= googleMapsApiKey %>&callback=initMap"></script>
+
+<%- include('includes/footer.ejs') %>
