@@ -7,29 +7,18 @@
     <p class="subtitle"><%= nombre %></p>
 
     <div class="content">
-      <h2 class="title is-4 mt-4">¿Qué importancia tiene AJAX en el desarrollo de RIA's (Rich Internet Applications)?</h2>
+      <h2 class="title is-4 mt-4">Servicio web utilizado</h2>
       <p>
-        AJAX es importante en el desarrollo de aplicaciones ricas de internet porque permite actualizar partes específicas de una página sin recargarla completa.
-        Esto hace que la interacción sea más rápida, fluida y dinámica para el usuario, mejorando la experiencia general y haciendo que el sitio se sienta más moderno e interactivo.
+        En este laboratorio se integró Google Maps como servicio web de terceros dentro de la aplicación.
+        Su uso permite mostrar información geográfica e interactiva directamente en una vista del sistema.
       </p>
 
-      <h2 class="title is-4 mt-4">¿Qué implicaciones de seguridad tiene AJAX? ¿Dónde se deben hacer las validaciones de seguridad, del lado del cliente o del lado del servidor?</h2>
+      <h2 class="title is-4 mt-4">¿Qué ventajas y desventajas tiene la integración de tus aplicaciones web con servicios web desarrollados por terceros?</h2>
       <p>
-        AJAX implica riesgos de seguridad similares a cualquier otra comunicación entre cliente y servidor, como manipulación de datos, acceso no autorizado o envío de información maliciosa.
-        Por eso, aunque en el cliente se pueden hacer validaciones para mejorar la experiencia del usuario, las validaciones de seguridad más importantes siempre deben realizarse del lado del servidor,
-        ya que el cliente puede ser modificado fácilmente por cualquier usuario.
-      </p>
-
-      <h2 class="title is-4 mt-4">¿Qué es JSON?</h2>
-      <p>
-        JSON es un formato ligero de intercambio de datos que organiza la información en pares de clave y valor.
-        Es muy utilizado en aplicaciones web porque es fácil de leer para las personas y sencillo de procesar tanto en JavaScript como en el servidor.
-      </p>
-
-      <h2 class="title is-4 mt-4">Componente AJAX utilizado en este laboratorio</h2>
-      <p>
-        En este laboratorio se implementó un componente AJAX para realizar una búsqueda asíncrona de canciones por artista.
-        Este componente se comunica con el servidor mediante fetch, recibe una respuesta en formato JSON y actualiza una parte de la página sin necesidad de recargarla completa.
+        Entre las ventajas se encuentra que permiten agregar funcionalidades avanzadas sin desarrollar todo desde cero,
+        lo que ahorra tiempo y esfuerzo. Además, muchos de estos servicios ya son robustos, escalables y bien documentados.
+        Como desventajas, existe dependencia de terceros, posibles límites de uso, cambios en costos, modificaciones en la API
+        y el riesgo de que si el servicio falla, parte de la aplicación también se vea afectada.
       </p>
     </div>
 
@@ -37,6 +26,7 @@
       <div class="buttons mt-4">
         <a href="/canciones" class="button is-dark">Ver canciones</a>
         <a href="/albumes" class="button is-dark">Ver álbumes</a>
+        <a href="/mapa" class="button is-primary">Ver mapa musical</a>
       </div>
     <% } else { %>
       <div class="buttons mt-4">
