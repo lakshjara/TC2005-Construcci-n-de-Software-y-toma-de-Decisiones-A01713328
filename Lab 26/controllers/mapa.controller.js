@@ -2,6 +2,6 @@ exports.get_mapa = (req, res, next) => {
     res.render('mapa', {
       tituloPagina: 'Mapa musical',
       username: req.session?.username || '',
-      googleMapsApiKey: 'PEGA_AQUI_TU_API_KEY'
+      googleMapsApiKey: 'AIzaSyA2zpkGXO8Sd302STiAXsyM8f8fLVm4RNw'
     });
   };

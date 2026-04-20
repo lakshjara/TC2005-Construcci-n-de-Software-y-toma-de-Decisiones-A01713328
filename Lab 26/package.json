@@ -1,7 +1,7 @@
 {
-  "name": "lab-24",
+  "name": "lab-26",
   "version": "1.0.0",
-  "description": "En esta actividad haremos una introducción a las tecnologías AJAX",
+  "description": "En esta actividad exploraremos algunos APIs de aplicaciones web, con el objetivo de que aprendas a integrar funcionalidad desarrollada por terceros en tus propias aplicaciones",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
